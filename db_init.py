@@ -23,7 +23,7 @@ if __name__ == '__main__':
         artist, title = track_photo_name.split('.')[0].split('_')
         track = Track.get_from_spotify(artist, title)
         if track is None:
-            print " !Couldn't get info for '{} - {}' ; skipping.".format(artist, title)
+            print "! Couldn't get info for '{} - {}' ; skipping.".format(artist, title)
             continue
         track.save()
 
