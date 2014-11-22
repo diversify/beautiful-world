@@ -10,5 +10,11 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/preview/<template>')
+def preview(template):
+    return render_template(template)
+
+
+
 if __name__ == '__main__':
     app.run(host=config.flask_host, port=config.flask_port, debug=config.flask_debug)

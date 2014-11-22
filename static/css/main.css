@@ -92,11 +92,17 @@ a:hover, a:active, a:focus {
 ------------------*/
 html{
 
-background: url(../img/background.png) no-repeat center center fixed;
+background: url(../img/background_2.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
 body{
@@ -121,38 +127,38 @@ h1, h2, h3, p, pre, blockquote, a, a:hover{
   font-variant: normal;
   font-weight: 200;
   line-height: auto;
+  color: #fff;
 }
 
 h1 {
   font-size: 4em;
-  color: #666;
+
 }
 
 h3 {
-  font-size: 2.8px;
-  color: #666;
+  font-size: 1.8em;
+
 }
 
 p {
-  font-size: 1.8em;
-  color: #666;
+  font-size: 0.8em;
+
 }
 
 blockquote {
   font-size: 1.2em;
-  color: #666;
+
 }
 
 pre {
   font-size: 1.2em;
-  color: #666;
+
 }
 
 a {
-  font-size: 1.4em;
-  color: #666;
+  font-size: 0.8em;
   text-decoration: underline;
-  color: #fff;
+
 }
 
 a:hover {
@@ -166,6 +172,7 @@ a:hover {
   margin-right: auto;
   text-align: center;
   margin-top: 25%; 
+  color: #fff;
 }
 
 .btn {
@@ -174,11 +181,90 @@ a:hover {
   background-repeat:no-repeat;
   font-size: 16px;
   padding: 10px 20px 10px 20px;
-  border: solid #8f8f8f 2px;
+  border: solid #fff 2px;
   text-decoration: none;
+  color: #fff;
 }
 
 .btn:hover {
-  background: #ebebeb;
+  background: #fff;
   text-decoration: none;
 }
+
+
+.col-md-8{
+  text-align: left;
+  min-width: 600px;
+  min-height: 400px;
+  height: auto;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:rgba(255,255,255,0.5);
+}
+
+
+@media all and (max-width: 768px){
+
+.col-md-8{
+  text-align: left;
+  min-width: auto;
+  min-height: auto;
+  height: auto;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:rgba(255,255,255,0.5);
+}
+
+h1 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+p {
+  font-size: 1em;
+}
+blockquote {
+  font-size: 1em;
+}
+pre {
+  font-size: 1em;
+}
+
+a {
+  font-size: 1em;
+}
+
+a:hover {
+  font-size: 1em;
+}
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) { 
+
+h1 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+p {
+  font-size: 1em;
+}
+blockquote {
+  font-size: 1em;
+}
+pre {
+  font-size: 1em;
+}
+
+a {
+  font-size: 1em;
+}
+
+a:hover {
+  font-size: 1em;
+}}
