@@ -85,3 +85,124 @@ a:hover, a:active, a:focus {
   /* Hidden by default*/
   display: none;
 }
+
+
+/*------------------
+--------------------
+------------------*/
+html{
+
+background: url(../img/background.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+body{
+  background-color: none;
+  background: none;
+}
+
+header{
+  background-color: none;
+  background: none;
+}
+
+.container{
+  background-color: none;
+  background: none;
+}
+
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 4em;
+  color: #666;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: auto;
+}
+h3 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2.8px;
+  color: #666;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: auto;
+}
+p {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  color: #666;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: auto;
+}
+blockquote {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  color: #666;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: auto;
+}
+pre {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  color: #666;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: 18.5714302062988px;
+}
+
+a {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  color: #666;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: 18.5714302062988px;
+  text-decoration: underline;
+  color: #fff;
+}
+
+a:hover {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  color: #666;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: 18.5714302062988px;
+  text-decoration: underline;
+  color: #ff6bd3;
+}
+
+.knappar{
+  width:300px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  font-family: Arial;
+  color: none;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #8f8f8f 2px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ebebeb;
+  text-decoration: none;
+}
