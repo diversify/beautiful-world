@@ -7,7 +7,8 @@
     <h1>Lorem ipsum dolor sit amet, consectetur adipisicing consectetur adipisicing</h1>
 
     <p style="margin-top:80px;">
-Empty...
+<p class="link">Uploading...</p>
+<a class="link">It's online!!!</a>
     </p>
 
 
@@ -15,8 +16,9 @@ Empty...
 
 <div class="knappar">
 
-<input type="button" class="btn" onclick="uploadFile()" value="Upload your image here!" >
-<input type="button" class="btn" value="Watch images from your pictures!">
+<button type="button" class="btn" onclick="document.querySelector('input').click()">Upload your image here!</button>
+	<input style="visibility: collapse; width: 0px;" type="file" onchange="upload(this.files[0])">
+<button type="button" class="btn" onclick="document.querySelector('input').click()">Watch images from your playlist!</button>
 
 </div>
 
