@@ -59,6 +59,13 @@ class Track(mongoengine.Document):
 
         return Track(**track_data)
 
+    def get_similar_tracks(self):
+        similar_tracks = []
+        for track in Track.objects():
+            if any(genre in self.genres for genre in track.genres):
+                similar_tracks.append(track)
+        return similar_tracks
+
 class Photo(mongoengine.Document):
     file = mongoengine.FileField(required=True)
 
