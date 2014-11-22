@@ -62,7 +62,7 @@ class Track(mongoengine.Document):
     def get_similar_tracks(self):
         similar_tracks = []
         for track in Track.objects():
-            if any(genre in self.genres for genre in track.genres):
+            if any(genre in self.genres for genre in track.genres) and track != self:
                 similar_tracks.append(track)
         return similar_tracks
 
@@ -75,7 +75,7 @@ class Submission(mongoengine.Document):
     track = mongoengine.ReferenceField(Track)
 
 if __name__ == '__main__':
-    db = mongoengine.connect('test_db')
+    db = mongoengine.connect(config.db_name)
     track = Track.get_from_spotify('maskinen', 'krossa alla fönster')
     track.save()
     print track.__dict__
