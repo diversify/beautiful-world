@@ -18,13 +18,10 @@ mongoengine.Document.to_dict = lambda d : json.loads(d.to_json())
 def index():
     return render_template('index.html')
 
-<<<<<<< HEAD
 @app.route('/preview/<template>')
 def preview(template):
     return render_template(template)
 
-
-=======
 @app.route('/api/tracks')
 def tracks():
     return json.dumps([track.to_dict() for track in Track.objects])
@@ -33,7 +30,6 @@ def tracks():
 def serve_photo():
     photo = Photo.objects[0]
     return send_file(photo.file, mimetype='image/jpeg')
->>>>>>> FETCH_HEAD
 
 if __name__ == '__main__':
     app.run(host=config.flask_host, port=config.flask_port, debug=config.flask_debug)
