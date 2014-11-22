@@ -1,18 +1,26 @@
+import json
+
 import mongoengine
 from flask import Flask, render_template, send_file
 
 import config
-from models import Photo
+from models import Photo, Track
 
 # Initializing the web app
 app = Flask(__name__)
 # Initializing the DB
 db = mongoengine.connect(config.db_name)
+# Utility function to dump objects to json
+mongoengine.Document.to_dict = lambda d : json.loads(d.to_json())
 
 # Views
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/api/tracks')
+def tracks():
+    return json.dumps([track.to_dict() for track in Track.objects])
 
 @app.route('/photo')
 def serve_photo():
