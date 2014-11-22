@@ -3,12 +3,11 @@
 
 {% block body %}
 
-<div style="text-align:center; margin-top:20px;">
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing</h1>
-    <h1>consectetur adipisicing</h1>
+<div style="text-align:center; margin-top:60px;">
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing consectetur adipisicing</h1>
 
-    <p>
-        Content will go here.
+    <p style="margin-top:80px;">
+Empty...
     </p>
 
 
@@ -16,9 +15,21 @@
 
 <div class="knappar">
 
-<button class="btn"> Ladda upp här!</button>
-<button class="btn"> Lyssna med din spellista!</button>
+<input type="file" name="fileToUpload[]" id="fileToUpload" onchange="fileSelected();"/>
+<input type="button" class="btn" onclick="uploadFile()" value="Upload your image here!" >
+<input type="button" class="btn" value="Watch images from your pictures!">
 
 </div>
+
+<form id="form1">
+
+       
+    <input type="file" name="fileToUpload[]" id="fileToUpload" onchange="fileSelected();" />
+
+   
+    <input type="button" onclick="uploadFile()" value="Upload" />
+
+    
+</form>
 
 {% endblock %}

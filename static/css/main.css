@@ -112,91 +112,67 @@ header{
 .container{
   background-color: none;
   background: none;
+  margin-top: 20px;
+}
+
+h1, h2, h3, p, pre, blockquote, a, a:hover{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+  font-variant: normal;
+  font-weight: 200;
+  line-height: auto;
 }
 
 h1 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 4em;
   color: #666;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 200;
-  line-height: auto;
 }
+
 h3 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 2.8px;
   color: #666;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 200;
-  line-height: auto;
 }
+
 p {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.8em;
   color: #666;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 200;
-  line-height: auto;
 }
+
 blockquote {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   color: #666;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 200;
-  line-height: auto;
 }
+
 pre {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.2em;
   color: #666;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 200;
-  line-height: 18.5714302062988px;
 }
 
 a {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1.4em;
   color: #666;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 200;
-  line-height: 18.5714302062988px;
   text-decoration: underline;
   color: #fff;
 }
 
 a:hover {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1.4em;
-  color: #666;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 200;
-  line-height: 18.5714302062988px;
-  text-decoration: underline;
   color: #ff6bd3;
 }
 
 .knappar{
-  width:300px;
+  width:600px;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 25%; 
 }
 
 .btn {
   font-family: Arial;
-  color: none;
-  font-size: 20px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  font-size: 16px;
   padding: 10px 20px 10px 20px;
   border: solid #8f8f8f 2px;
   text-decoration: none;
