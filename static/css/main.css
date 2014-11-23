@@ -91,13 +91,21 @@ a:hover, a:active, a:focus {
 --------------------
 ------------------*/
 html{
-
+/*
 background: url(../img/background_2.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+*/
+}
 
+.jumbotron{
+    background: url("../img/background_2.jpg") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
 body{
@@ -214,6 +222,37 @@ a:active {
 .logo-img{
   width: 60%;
   height: auto;
+}
+
+.col-md-6{
+  text-align: center;
+}
+
+
+.widewrapper {
+  width:100%;
+  }
+
+.widewrapper > img {
+  width:100%;
+}
+
+.row{
+  width: 80%;
+  min-height: 600px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.row h1,.row h3,.row p,.row a{
+    color: #000;
+}
+
+.img-circle{
+  width: 80%;
+  height: 80%;
 }
 
 
