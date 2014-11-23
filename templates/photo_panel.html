@@ -1,11 +1,11 @@
 <ul class="submissions mini">
     {% for submission in submissions %}
-        {% set track = submission.track%}
+        {% set track = submission.track %}
         <li class="photo">
             <div class="track-overlay">
             </div>
             <div class="player-controls">
-                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-play play-button" aria-hidden="true"></span>
                 <a class="play-on-spotify" href="{{track.uri}}">
                     On Spotify
                 </a>
