@@ -176,7 +176,7 @@ a:active {
 }
 
 .front-p{
-  width: 500px;
+  width: 550px;
   height: auto;
   margin-right: auto;
   margin-left: auto;
@@ -491,20 +491,3 @@ a:hover {
 }
 
 /**---**/
-
-.fileUpload {
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-}
-.fileUpload input.upload {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
