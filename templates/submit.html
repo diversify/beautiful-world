@@ -3,18 +3,17 @@
 
 {% block body %}
 
-<div style="text-align:center; margin-top:60px;">
+<div style="text-align:center; margin-top:60px; width:40%; height:auto; margin-left:auto; margin-right:auto;">
   <form id="my-awesome-dropzone" action='/upload' method='post' enctype=multipart/form-data>
 		<div class="col-md-8 input-group input-group-lg"> 
 			<h3 style="padding-left: 10px; margin-bottom:40px;">Submit your image and what you are listening to</h3>
-				<div class="col-md-6 input-group-lg">
-					<input name="file" type="file" class="form-control">
-				</div>
-				<div class="col-md-6 input-group-lg">
-					<input name="song" class="form-control" placeholder="What song?" style="margin-bottom:15px;">
-					<input name="artist" class="form-control" placeholder="Which artist?" style="margin-bottom:15px;">
-					<button type="submit" class="btn" value="Submit" id="left">Submit files</button>
-				</div>
+			
+			<input name="file" type="file" class="form-control btn" style="margin-bottom:15px;">
+
+			<input name="song" class="form-control" placeholder="What song?" style="margin-bottom:15px;">
+			<input name="artist" class="form-control" placeholder="Which artist?" style="margin-bottom:15px;">
+			<button type="submit" class="btn" value="Submit" id="left" style="margin-bottom:15px;">Submit files</button>
+		
 		</div>
 	</form>
 </div>
