@@ -7,14 +7,15 @@
 	<form>
 		<div class="col-md-8 input-group input-group-lg"> 
 			<h3>Submit your image and what you are listening to</h3>
-				<div class="col-md-6 input-group input-group-lg">
+				<div class="col-md-6 input-group-lg">
 					<button type="button" class="btn" onclick="document.querySelector('input').click()" style="margin-right:15px;">Upload your image here</button>
 					<input style="display: none; width: 0px;" type="file" onchange="upload(this.files[0])">
 				</div>
-				<div class="col-md-6 input-group input-group-lg">
+				<div class="col-md-6 input-group-lg">
 					<p><input class="form-control" placeholder="What do you want to call you picture?"></p>	
 					<p><input class="form-control" placeholder="What song?"></p>
 					<p><input class="form-control" placeholder="Which artist?"></p>
+					<button type="button" class="btn">Submit files</button>
 				</div>
 		</div>
 	</form>

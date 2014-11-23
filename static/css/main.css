@@ -161,6 +161,10 @@ a:hover {
   color: #ff6bd3;
 }
 
+a:active {
+  color: #fff;
+}
+
 .knappar{
   width:600px;
   height: 100px;
@@ -197,7 +201,6 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
   background-color:rgba(255,255,255,0.5);
-  padding: 10px;
 }
 
 
@@ -212,6 +215,7 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
   background-color:rgba(255,255,255,0.5);
+  padding: 10px;
 }
 
 .btn {
