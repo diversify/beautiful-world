@@ -1,7 +1,7 @@
 import json
 
 import mongoengine
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, request
 
 import config
 from models import Submission
@@ -22,6 +22,13 @@ def index():
 def submissions_view():
     return render_template('submissions.html', submissions=Submission.objects)
 
+@app.route('/photo_panel/<submission_id>')
+def photo_panel(submission_id):
+    submission = Submission.objects.get(id=submission_id)
+    similar_tracks = submission.track.get_similar_tracks()
+    similar_submissions = [Submission.objects.get(track=t) for t in similar_tracks[:6]]
+    return render_template('photo_panel.html', submissions=similar_submissions)
+
 @app.route('/preview/<template>')
 def preview(template):
     return render_template(template)
@@ -34,6 +41,10 @@ def api_submissions():
 def api_submission_photo(submission_id):
     photo = Submission.objects.get(id=submission_id).photo
     return send_file(photo.file, mimetype='image/jpeg')
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    return render_template('submissions.html')
 
 if __name__ == '__main__':
     app.run(host=config.flask_host, port=config.flask_port, debug=config.flask_debug)

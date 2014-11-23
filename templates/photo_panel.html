@@ -1,16 +1,7 @@
-{% extends 'base.html' %}
-
-
-{% block body %}
-
-<div id="submissions-wrapper">
-    <h1>Submissions</h1>
-
-    <ul class="submissions main">
+<ul class="submissions mini">
     {% for submission in submissions %}
         {% set track = submission.track%}
-        <li class="main-submission" data-submission-id="{{submission.id}}">
-        <div class="photo">
+        <li class="photo">
             <div class="track-overlay">
             </div>
             <div class="player-controls">
@@ -34,16 +25,6 @@
                 </span>
             </div>
             <img src="/api/submission/{{submission.id}}/photo">
-        </div>
-        <div class="photo_panel">
-        </div>
         </li>
     {% endfor %}
-    </ul>
-</div>
-</div>
-{% endblock %}
-
-{% block javascript %}
-    <script src="/static/js/submissions.js"></script>
-{% endblock %}
+</ul>

@@ -2,26 +2,19 @@
 
 
 {% block body %}
-
 <div style="text-align:center; margin-top:60px;">
-	<form>
+  <form action='/upload' method=post>
 		<div class="col-md-8 input-group input-group-lg"> 
 			<h3 style="padding-left: 10px; margin-bottom:40px;">Submit your image and what you are listening to</h3>
 				<div class="col-md-6 input-group-lg">
-					
-					<button type="button" class="btn" onclick="document.querySelector('input').click()" style="margin-right:15px; margin-top:40%;">Upload your image here</button>
-					<input style="display: none; width: 0px;" type="file" onchange="upload(this.files[0])">
-				
+					<button type="button" class="btn" onclick="document.querySelector('input').click()" style="margin-right:15px;">Upload your image here</button>
+					<input name="picture" style="display: none; width: 0px;" type="file" onchange="upload(this.files[0])">
 				</div>
-				
-				<div class="col-md-6 input-group-lg" style="text-align:left;">
-				
-					<p><input class="form-control" placeholder="What do you want to call you picture?" style="margin-bottom:20px;"></p>	
-					<p><input class="form-control" placeholder="What song?" style="margin-bottom:20px;"></p>
-					<p><input class="form-control" placeholder="Which artist?" style="margin-bottom:20px;"></p>
-				
-					<button type="submit" class="btn" value="Submit" >Submit files</button>
-				
+				<div class="col-md-6 input-group-lg">
+					<p><input name="pic_name" class="form-control" placeholder="What do you want to call you picture?"></p>	
+					<p><input name="song" class="form-control" placeholder="What song?"></p>
+					<p><input name="artist" class="form-control" placeholder="Which artist?"></p>
+					<button type="submit" class="btn" value="Submit">Submit files</button>
 				</div>
 		</div>
 	</form>
