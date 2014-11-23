@@ -137,9 +137,9 @@ h3 {
 }
 
 p {
-  font-size: 0.8em;
-
+  font-size: 1.2em;
 }
+
 
 blockquote {
   font-size: 1.2em;
@@ -165,19 +165,27 @@ a:active {
   color: #fff;
 }
 
+.front-p{
+  width: 500px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
+}
+
 .knappar{
   width:600px;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-top: 25%; 
+  margin-top: 5%; 
   color: #fff;
 }
 
 .btn {
   font-family: Arial;
-  background-color: Transparent;
+  background-color: transparent;
   background-repeat:no-repeat;
   font-size: 16px;
   padding: 10px 20px 10px 20px;
@@ -201,6 +209,11 @@ a:active {
   margin-right: auto;
   margin-left: auto;
   background-color:rgba(255,255,255,0.5);
+}
+
+.logo-img{
+  width: 60%;
+  height: auto;
 }
 
 
