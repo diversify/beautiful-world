@@ -9,7 +9,7 @@ from pyechonest import config as echonest_config
 from pyechonest import song as echonest_song
 from pyechonest import artist as echonest_artist
 import requests
-from sklearn.metrics.pairwise import cosine_similarity
+#from sklearn.metrics.pairwise import cosine_similarity
 
 import config
 
