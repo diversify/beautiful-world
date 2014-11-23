@@ -14,7 +14,7 @@ def clean(string):
 
 if __name__ == '__main__':
 
-    for track_photo_name in os.listdir(PICTURES_FOLDER):
+    for track_photo_name in sorted(os.listdir(PICTURES_FOLDER)):
         path = os.path.join(PICTURES_FOLDER, track_photo_name)
         # Photo object
         photo = Photo()
