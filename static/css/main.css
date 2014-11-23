@@ -408,6 +408,7 @@ a:hover {
     position: absolute;
     left: 50px;
     bottom: 50px;
+    z-index: 20;
 }
 .player-controls .glyphicon {
     color: rgba(255, 255, 255, 0.9);
