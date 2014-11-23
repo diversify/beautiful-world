@@ -9,18 +9,15 @@
     <ul class="submissions main">
     {% for submission in submissions %}
         {% set track = submission.track%}
-        <li class="main-submission" data-submission-id="{{submission.id}}">
-        <div class="photo">
+        <li class="photo" data-submission-id="{{submission.id}}">
             <div class="track-overlay">
             </div>
             <div class="player-controls">
-                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-play play-button" aria-hidden="true"></span>
                 <a class="play-on-spotify" href="{{track.uri}}">
                     On Spotify
                 </a>
-                <audio class="track-preview" preload="none">
-                    <source src="{{track.preview_url}}" type="audio/mpeg">
-                </audio>
+                <audio src="{{track.preview_url}}" class="track-preview" preload="none"></audio>
             </div>
             <div class="track-details">
                 <span class="track-name">
@@ -34,9 +31,9 @@
                 </span>
             </div>
             <img src="/api/submission/{{submission.id}}/photo">
-        </div>
-        <div class="photo_panel">
-        </div>
+
+            <div class="photo_panel">
+            </div>
         </li>
     {% endfor %}
     </ul>
