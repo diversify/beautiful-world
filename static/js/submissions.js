@@ -1,6 +1,7 @@
 $(document).ready(function() {
     function playHandler(event) {
-        var trackPreview = $(this).parent().find('.track-preview')[0];
+        var $button = $(this);
+        var trackPreview = $button.parent().find('.track-preview')[0];
         // Pause all the other songs
         $('.track-preview').each(function(i, audio) {
             if (audio != trackPreview) {
@@ -8,8 +9,13 @@ $(document).ready(function() {
             }
         });
 
+        $('.track-preview').parent().find('.play-button').removeClass('glyphicon-pause');
+        $('.track-preview').parent().find('.play-button').addClass('glyphicon-start');
+
         // Play or pause the song
         if (trackPreview.paused) {
+            $button.removeClass('glyphicon-start');
+            $button.addClass('glyphicon-pause');
             trackPreview.play();
         } else {
             trackPreview.pause();
