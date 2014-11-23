@@ -2,3 +2,4 @@ flask
 mongoengine
 pyechonest
 numpy
+scikit-learn
