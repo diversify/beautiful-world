@@ -9,8 +9,7 @@
     <ul class="submissions main">
     {% for submission in submissions %}
         {% set track = submission.track%}
-        <li class="main-submission" data-submission-id="{{submission.id}}">
-        <div class="photo">
+        <li class="photo" data-submission-id="{{submission.id}}">
             <div class="track-overlay">
             </div>
             <div class="player-controls">
@@ -34,9 +33,9 @@
                 </span>
             </div>
             <img src="/api/submission/{{submission.id}}/photo">
-        </div>
-        <div class="photo_panel">
-        </div>
+
+            <div class="photo_panel">
+            </div>
         </li>
     {% endfor %}
     </ul>
