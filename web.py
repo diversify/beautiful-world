@@ -22,6 +22,13 @@ def index():
 def submissions_view():
     return render_template('submissions.html', submissions=Submission.objects)
 
+@app.route('/photo_panel')
+def photo_panel():
+    submission = Submission.objects[0]
+    similar_tracks = submission.track.similar_tracks
+    similar_submissions = [Submission.objects.get(track=t) for t, val in similar_tracks[:6]]
+    return render_template('photo_panel.html', submissions=similar_submissions)
+
 @app.route('/preview/<template>')
 def preview(template):
     return render_template(template)
