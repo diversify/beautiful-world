@@ -8,7 +8,8 @@
 		<div class="col-md-8 input-group input-group-lg"> 
 			<h3>Submit your image and what you are listening to</h3>
 				<div class="col-md-6 input-group input-group-lg">
-					<img src="" alt="" class="img-rounded">
+					<button type="button" class="btn" onclick="document.querySelector('input').click()" style="margin-right:15px;">Upload your image here</button>
+					<input style="display: none; width: 0px;" type="file" onchange="upload(this.files[0])">
 				</div>
 				<div class="col-md-6 input-group input-group-lg">
 					<p><input class="form-control" placeholder="What do you want to call you picture?"></p>	
