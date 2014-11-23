@@ -9,7 +9,7 @@
     <ul class="submissions main">
     {% for submission in submissions %}
         {% set track = submission.track%}
-        <li class="main-submission">
+        <li class="main-submission" data-submission-id="{{submission.id}}">
         <div class="photo">
             <div class="track-overlay">
             </div>
