@@ -28,7 +28,9 @@ $(document).ready(function() {
             }
         });
         // Open our photo panel if it's not already open
-        if (!$photoPanel.is('visible')) {
+        if ($photoPanel.is('visible')) {
+            $photoPanel.hide();
+        } else {
             $photoPanel.load('/photo_panel/' + submissionId, function() {
                 $photoPanel.show();
                 $photoPanel.find('.play-button').click(playHandler);

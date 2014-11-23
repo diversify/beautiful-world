@@ -354,17 +354,24 @@ a:hover {
 /* Submissions page */
 
 #submissions-wrapper {
-    background: #FFF;
+    background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.24);
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 14px rgba(33, 33, 33, 0.22);
 }
 
 #submissions-wrapper h1 {
-    color: #000;
+    color: #fff;
     padding: 25px 0px 0 25px;
+    margin-bottom: 5px;
 }
 
+#submissions-wrapper h3 {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 20px;
+    padding: 0px 28px;
+    margin: 0;
+}
 .submissions {
     list-style: none;
     padding: 25px;
