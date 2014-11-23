@@ -4,18 +4,21 @@
 from datetime import datetime
 
 import mongoengine
+import numpy as np
 from pyechonest import config as echonest_config
 from pyechonest import song as echonest_song
 from pyechonest import artist as echonest_artist
 import requests
+#from sklearn.metrics.pairwise import cosine_similarity
 
 import config
 
 echonest_config.ECHO_NEST_API_KEY = config.echo_nest_api_key
 SPOTIFY_API = 'https://api.spotify.com/v1'
+FEATURES_KEYS = {'energy', 'liveness', 'tempo', 'speechiness', 'acousticness', 'danceability', 'instrumentalness'}
 
 class Track(mongoengine.Document):
-    id = mongoengine.StringField(primary_key=True)
+    id = mongoengine.StringField(primary_key=True, unique=True)
     name = mongoengine.StringField(required=True)
     artist_id = mongoengine.StringField(required=True)
     artist_name = mongoengine.StringField(required=True)
@@ -25,6 +28,17 @@ class Track(mongoengine.Document):
     image = mongoengine.StringField(required=True)
     genres = mongoengine.ListField(mongoengine.StringField())
     audio_summary = mongoengine.DictField()
+
+    @property
+    def features_vector(self):
+        return np.array([self.audio_summary[attr] for attr in FEATURES_KEYS])
+
+    @property
+    def similar_tracks(self, n=5):
+        tracks = Track.objects()
+        features = self.features_vector
+        tracks = sorted(tracks, key=lambda t: cosine_similarity(features, t.features_vector))
+        return [(t, cosine_similarity(features, t.features_vector)) for t in tracks]
 
     @staticmethod
     def get_from_spotify(artist, title):
@@ -60,11 +74,8 @@ class Track(mongoengine.Document):
         return Track(**track_data)
 
     def get_similar_tracks(self):
-        similar_tracks = []
-        for track in Track.objects():
-            if any(genre in self.genres for genre in track.genres) and track != self:
-                similar_tracks.append(track)
-        return similar_tracks
+        ranked_tracks = sorted(Track.objects, key=lambda t : len([g for g in t.genres if g in self.genres]), reverse=True)
+        return [t for t in ranked_tracks if t != self]
 
 class Photo(mongoengine.Document):
     file = mongoengine.FileField(required=True)

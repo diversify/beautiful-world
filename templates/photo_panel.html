@@ -1,0 +1,30 @@
+<ul class="submissions mini">
+    {% for submission in submissions %}
+        {% set track = submission.track%}
+        <li class="photo">
+            <div class="track-overlay">
+            </div>
+            <div class="player-controls">
+                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                <a class="play-on-spotify" href="{{track.uri}}">
+                    On Spotify
+                </a>
+                <audio class="track-preview" preload="none">
+                    <source src="{{track.preview_url}}" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="track-details">
+                <span class="track-name">
+                    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+                    {{track.name}}
+                </span>
+                <br>
+                <span class="track-artist">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    {{track.artist_name}}
+                </span>
+            </div>
+            <img src="/api/submission/{{submission.id}}/photo">
+        </li>
+    {% endfor %}
+</ul>

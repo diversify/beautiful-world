@@ -91,12 +91,22 @@ a:hover, a:active, a:focus {
 --------------------
 ------------------*/
 html{
-
-background: url(../img/background.png) no-repeat center center fixed;
+/*
+background: url(../img/background_2.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+*/
+}
+
+.jumbotron{
+  min-height: 768px;
+    background: url("../img/background_2.jpg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body{
@@ -121,42 +131,55 @@ h1, h2, h3, p, pre, blockquote, a, a:hover{
   font-variant: normal;
   font-weight: 200;
   line-height: auto;
+  color: #fff;
 }
+
 
 h1 {
   font-size: 4em;
-  color: #666;
+
 }
 
 h3 {
-  font-size: 2.8px;
-  color: #666;
+  font-size: 1.8em;
+
 }
 
 p {
-  font-size: 1.8em;
-  color: #666;
+  font-size: 1.2em;
 }
+
 
 blockquote {
   font-size: 1.2em;
-  color: #666;
+
 }
 
 pre {
   font-size: 1.2em;
-  color: #666;
+
 }
 
 a {
-  font-size: 1.4em;
-  color: #666;
+  font-size: 0.8em;
   text-decoration: underline;
-  color: #fff;
+
 }
 
 a:hover {
   color: #ff6bd3;
+}
+
+a:active {
+  color: #fff;
+}
+
+.front-p{
+  width: 500px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5%;
 }
 
 .knappar{
@@ -165,20 +188,297 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-top: 25%; 
+  margin-top: 5%; 
+  color: #fff;
 }
 
 .btn {
   font-family: Arial;
-  background-color: Transparent;
+  background-color: transparent;
   background-repeat:no-repeat;
   font-size: 16px;
   padding: 10px 20px 10px 20px;
-  border: solid #8f8f8f 2px;
+  border: solid #fff 2px;
   text-decoration: none;
+  color: #fff;
 }
 
 .btn:hover {
-  background: #ebebeb;
+  background: #fff;
   text-decoration: none;
+}
+
+
+.col-md-8{
+  text-align: left;
+  min-width: 600px;
+  min-height: 400px;
+  height: auto;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:rgba(255,255,255,0.5);
+}
+
+.logo-img{
+  width: 60%;
+  height: auto;
+}
+
+.col-md-6{
+  text-align: center;
+}
+
+
+.widewrapper {
+  width:100%;
+  }
+
+.widewrapper > img {
+  width:100%;
+}
+
+.row{
+  width: 80%;
+  min-height: 600px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.row h1,.row h3,.row p,.row a{
+    color: #000;
+}
+
+.img-circle{
+  width: 80%;
+  height: 80%;
+}
+
+.col-md-6 .btn #left{
+margin-top:20%;
+}
+
+@media all and (max-width: 768px){
+
+.col-md-8{
+  text-align: left;
+  min-width: auto;
+  min-height: auto;
+  height: auto;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:rgba(255,255,255,0.5);
+  padding: 10px;
+}
+
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial;
+  background-color: transparent;
+  background-repeat:no-repeat;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  border: solid #fff 2px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn:hover, a .btn:hover {
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+}
+
+.col-md-6 .btn {
+margin-top:20px;
+margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+p {
+  font-size: 1em;
+}
+blockquote {
+  font-size: 1em;
+}
+pre {
+  font-size: 1em;
+}
+
+a {
+  font-size: 1em;
+}
+
+a:hover {
+  font-size: 1em;
+}
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+
+h1 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+p {
+  font-size: 1em;
+}
+blockquote {
+  font-size: 1em;
+}
+pre {
+  font-size: 1em;
+}
+
+a {
+  font-size: 1em;
+}
+
+a:hover {
+  font-size: 1em;
+}}
+
+/* Submissions page */
+
+#submissions-wrapper {
+    background: #FFF;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+}
+
+#submissions-wrapper h1 {
+    color: #000;
+    padding: 25px 0px 0 25px;
+}
+
+.submissions {
+    list-style: none;
+    padding: 25px;
+}
+
+.submissions .photo {
+    position: relative;
+}
+
+.submissions .photo img {
+    width: 100%;
+}
+
+.track-details {
+    position: absolute;
+    text-align: right;
+    bottom: 30px;
+    right: 0px;
+}
+
+.track-name {
+    font-size: 28px;
+    padding: 8px 15px;
+    color: #FFF;
+}
+.track-artist {
+    font-size: 22px;
+    padding: 4px 15px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.track-artist .glyphicon {
+    font-size: 15px;
+}
+
+.player-controls {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+.player-controls .glyphicon {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 45px;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+    opacity: 0.5;
+    cursor: pointer;
+}
+.player-controls .glyphicon:hover {
+    opacity: 1;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+.play-on-spotify {
+    display: block;
+    text-decoration: none;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+.play-on-spotify:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+.track-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 25%) repeat scroll 0% 0% transparent; /* W3C */
+}
+
+.photo_panel {
+    width: 100%;
+}
+
+.photo_panel .submissions {
+    padding: 0;
+    margin: 0;
+}
+
+.photo_panel .photo {
+    z-index: 20;
+    overflow: hidden;
+    float: left;
+    width: 33.33333%;
+}
+
+.photo_panel li .track-details .glyphicon {
+    display: none;
+}
+
+.photo_panel li .track-name {
+    font-size: 15px;
+    background: none;
+}
+.photo_panel li .track-artist {
+    font-size: 12px !important;
+    background: none;
+}
+
+.photo_panel li .player-controls {
+    left: 15px;
+    bottom: 20px;
+}
+
+.photo_panel li .track-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 50%) repeat scroll 0% 0% transparent
+}
+.photo_panel li:hover .track-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 180%) repeat scroll 0% 0% transparent
+}
+
+.photo_panel li .track-details, .photo_panel li .player-controls {
+    opacity: 0;
+}
+
+.photo_panel li:hover .track-details, .photo_panel li:hover .player-controls {
+    opacity: 0.8 !important;
 }

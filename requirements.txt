@@ -1,3 +1,6 @@
 flask
 mongoengine
 pyechonest
+numpy
+scikit-learn
+scipy
