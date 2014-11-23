@@ -346,15 +346,27 @@ a:hover {
 }
 .player-controls .glyphicon {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 40px;
+    font-size: 45px;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+    opacity: 0.5;
     cursor: pointer;
 }
-
 .player-controls .glyphicon:hover {
-    color: rgba(10, 10, 10, 0.9);
+    opacity: 1;
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
 }
+
+.play-on-spotify {
+    display: block;
+    text-decoration: none;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+.play-on-spotify:hover {
+    opacity: 1;
+    color: #fff;
+}
+
 .track-overlay {
     position: absolute;
     width: 100%;

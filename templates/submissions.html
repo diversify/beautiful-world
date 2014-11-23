@@ -8,13 +8,19 @@
 
     <ul class="submissions">
     {% for submission in submissions %}
-        {%set track = submission.track%}
+        {% set track = submission.track%}
         <li>
         <div class="photo">
             <div class="track-overlay">
             </div>
             <div class="player-controls">
                 <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                <a class="play-on-spotify" href="{{track.uri}}">
+                    On Spotify
+                </a>
+                <audio controls class="track-preview" preload="none">
+                    <source src="{{track.preview_url}}" type="audio/mpeg">
+                </audio>
             </div>
             <div class="track-details">
                 <span class="track-name">
@@ -34,5 +40,8 @@
     </ul>
 </div>
 
+{% endblock %}
+
+{% block javascript %}
 
 {% endblock %}
