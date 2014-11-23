@@ -1,10 +1,12 @@
 import json
 
 import mongoengine
-from flask import Flask, render_template, send_file, request
+from flask import Flask, render_template, send_file, request, redirect
 
 import config
 from models import Submission
+from models import Photo
+from models import Track
 
 # Initializing the web app
 app = Flask(__name__)
@@ -44,7 +46,22 @@ def api_submission_photo(submission_id):
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
-    return render_template('submissions.html')
+    title = request.form['song']
+    artist = request.form['artist']
+    picture_file = request.files['file']
+    photo = Photo()
+    photo.file.put(picture_file)
+    photo.save()
+
+    track = Track.get_from_spotify(artist, title)
+    if track is None:
+        return "No track found!"
+    track.save()
+
+    submission = Submission(photo=photo, track=track)
+    submission.save()
+
+    return redirect('/submissions')
 
 if __name__ == '__main__':
     app.run(host=config.flask_host, port=config.flask_port, debug=config.flask_debug)

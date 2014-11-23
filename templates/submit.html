@@ -2,13 +2,13 @@
 
 
 {% block body %}
+
 <div style="text-align:center; margin-top:60px;">
-  <form action='/upload' method=post>
+  <form id="my-awesome-dropzone" action='/upload' method='post' enctype=multipart/form-data>
 		<div class="col-md-8 input-group input-group-lg"> 
 			<h3 style="padding-left: 10px; margin-bottom:40px;">Submit your image and what you are listening to</h3>
 				<div class="col-md-6 input-group-lg">
-					<button type="button" class="btn" onclick="document.querySelector('input').click()" style="margin-right:15px;">Upload your image here</button>
-					<input name="picture" style="display: none; width: 0px;" type="file" onchange="upload(this.files[0])">
+					<input name="file" type="file" class="form-control" placeholder="What do you want to call you picture?">
 				</div>
 				<div class="col-md-6 input-group-lg">
 					<input name="pic_name" class="form-control" placeholder="What do you want to call you picture?" style="margin-bottom:15px;">
