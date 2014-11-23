@@ -7,6 +7,10 @@
     <h1>Submissions</h1>
     <h3>Click on an image to get recommendations</h3>
 
+    <button type="button" class="btn btn-submit-right" onclick="window.location.href='/preview/submit.html'" style="margin-right:15px;">
+        Upload an image
+    </button>
+
     <ul class="submissions main">
     {% for submission in submissions %}
         {% set track = submission.track%}
