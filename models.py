@@ -18,7 +18,7 @@ SPOTIFY_API = 'https://api.spotify.com/v1'
 FEATURES_KEYS = {'energy', 'liveness', 'tempo', 'speechiness', 'acousticness', 'danceability', 'instrumentalness'}
 
 class Track(mongoengine.Document):
-    id = mongoengine.StringField(primary_key=True)
+    id = mongoengine.StringField(primary_key=True, unique=True)
     name = mongoengine.StringField(required=True)
     artist_id = mongoengine.StringField(required=True)
     artist_name = mongoengine.StringField(required=True)
